@@ -7,7 +7,7 @@ license = "Insert License Here"
 modId = "bjorkhorse"
 version = "${version}"
 displayName = "BjorkHorse"
-authors = "Me!"
+authors = "Kitoglav"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''

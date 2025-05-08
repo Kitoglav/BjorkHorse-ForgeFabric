@@ -1,0 +1,4 @@
+accessWidener v2 named
+
+accessible method net/minecraft/entity/passive/AbstractHorseEntity getHorseFlag (I)Z
+accessible method net/minecraft/entity/passive/AbstractHorseEntity setHorseFlag (IZ)V

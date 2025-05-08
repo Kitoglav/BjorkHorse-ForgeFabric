@@ -23,7 +23,9 @@ configurations {
         canBeConsumed = false
     }
 }
-
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+}
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
@@ -51,5 +53,6 @@ shadowJar {
 }
 
 remapJar {
+    injectAccessWidener = true
     inputFile.set shadowJar.archiveFile
 }
