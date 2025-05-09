@@ -5,7 +5,7 @@
   "name": "BjorkHorse",
   "description": "Makes all horses WISE and gives them ability of TOTAL AND ABSOLUTE AGREEMENT",
   "authors": [
-    "Me!"
+    "Kitoglav"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -27,9 +27,9 @@
   ],
   "depends": {
     "fabricloader": ">=0.16.14",
-    "minecraft": "~1.20.1",
-    "java": ">=17",
-    "architectury": ">=9.2.14",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
     "fabric-api": "*"
   },
   "suggests": {
