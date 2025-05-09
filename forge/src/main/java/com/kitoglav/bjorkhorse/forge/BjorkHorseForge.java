@@ -24,6 +24,6 @@ public final class BjorkHorseForge {
     }
 
     private void registerSounds(RegisterEvent event) {
-        event.register(ForgeRegistries.Keys.SOUND_EVENTS, helper -> helper.register(AGREE_SOUND_ID, BjorkHorseMod.AGREE_SOUND_EVENT = SoundEvent.of(AGREE_SOUND_ID)));
+        event.register(ForgeRegistries.Keys.SOUND_EVENTS, helper -> helper.register(AGREE_SOUND_ID, BjorkHorseMod.AGREE_SOUND_EVENT = new SoundEvent(AGREE_SOUND_ID)));
     }
 }
