@@ -1,7 +1,6 @@
 package com.kitoglav.bjorkhorse;
 
 import com.kitoglav.bjorkhorse.api.IHorseAgree;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,7 +8,9 @@ import net.minecraft.sound.SoundCategory;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumSet;
-
+/**
+ * Copyright © 2025 Kitoglav Licensed under the Apache License, Version 2.0
+ **/
 public class HorseAgreeGoal extends Goal {
     private static final double AGREE_CHANCE = 0.01D;
     private static final double AGREE_DISTANCE = 15D;
@@ -56,7 +57,7 @@ public class HorseAgreeGoal extends Goal {
     public void tick() {
         if (agreeTimer > 0) {
             agreeTimer--;
-            if(player != null && player.distanceTo(horse) < AGREE_DISTANCE) {
+            if (player != null && player.distanceTo(horse) < AGREE_DISTANCE) {
                 horse.getLookControl().lookAt(player, 30F, 30F);
             }
         }

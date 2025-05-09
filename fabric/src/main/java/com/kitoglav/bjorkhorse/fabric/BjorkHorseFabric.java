@@ -7,7 +7,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 
 import static com.kitoglav.bjorkhorse.BjorkHorseMod.AGREE_SOUND_ID;
-
+/**
+ * Copyright © 2025 Kitoglav Licensed under the Apache License, Version 2.0
+ **/
 public final class BjorkHorseFabric implements ModInitializer {
     @Override
     public void onInitialize() {

@@ -6,7 +6,6 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.inventory.InventoryChangedListener;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,6 +16,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/**
+ * Copyright © 2025 Kitoglav Licensed under the Apache License, Version 2.0
+ **/
 @Mixin(AbstractHorseEntity.class)
 public abstract class HorseMixin extends AnimalEntity implements InventoryChangedListener, RideableInventory, Tameable, JumpingMount, Saddleable, IHorseAgree {
     @Unique
@@ -36,7 +38,7 @@ public abstract class HorseMixin extends AnimalEntity implements InventoryChange
     @Shadow
     public abstract void setHorseFlag(int bitmask, boolean flag);
 
-    @Inject(method = "initCustomGoals", at= @At("TAIL"))
+    @Inject(method = "initCustomGoals", at = @At("TAIL"))
     private void addAgreeGoal(CallbackInfo ci) {
         this.goalSelector.add(5, new HorseAgreeGoal((AbstractHorseEntity) (Object) this));
     }

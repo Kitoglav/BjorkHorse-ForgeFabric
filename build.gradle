@@ -11,6 +11,18 @@ architectury {
 allprojects {
     group = rootProject.maven_group
     version = rootProject.mod_version
+    afterEvaluate {
+        var licenseFile = rootProject.file("LICENSE")
+        if (licenseFile.exists()) {
+            project.tasks.withType(Jar).configureEach { jarTask ->
+                jarTask.from(licenseFile) {
+                    into("")
+                }
+            }
+        } else {
+            project.logger.warn("LICENSE file not found in root directory. JARs will not include license.")
+        }
+    }
 }
 
 subprojects {

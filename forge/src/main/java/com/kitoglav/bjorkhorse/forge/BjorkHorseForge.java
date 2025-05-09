@@ -1,17 +1,18 @@
 package com.kitoglav.bjorkhorse.forge;
 
+import com.kitoglav.bjorkhorse.BjorkHorseMod;
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraft.sound.SoundEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import com.kitoglav.bjorkhorse.BjorkHorseMod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 
 import static com.kitoglav.bjorkhorse.BjorkHorseMod.AGREE_SOUND_ID;
-
+/**
+ * Copyright © 2025 Kitoglav Licensed under the Apache License, Version 2.0
+ **/
 @Mod(BjorkHorseMod.MOD_ID)
 public final class BjorkHorseForge {
 

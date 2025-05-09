@@ -3,7 +3,7 @@
   "id": "bjorkhorse",
   "version": "${version}",
   "name": "BjorkHorse",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Makes all horses WISE and gives them ability of TOTAL AND ABSOLUTE AGREEMENT",
   "authors": [
     "Me!"
   ],
@@ -11,8 +11,8 @@
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/bjorkhorse/icon.png",
+  "license": "Apache License 2.0",
+  "@icon": "assets/bjorkhorse/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

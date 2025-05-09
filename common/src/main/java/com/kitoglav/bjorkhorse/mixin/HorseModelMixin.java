@@ -10,23 +10,45 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+/**
+ * Copyright © 2025 Kitoglav Licensed under the Apache License, Version 2.0
+ **/
 @Mixin(HorseEntityModel.class)
 public abstract class HorseModelMixin<T extends AbstractHorseEntity> extends AnimalModel<T> {
-    @Shadow @Final protected ModelPart head;
-    @Shadow @Final protected ModelPart body;
-    @Shadow @Final private ModelPart leftFrontLeg;
-    @Shadow @Final private ModelPart rightFrontLeg;
-    @Shadow @Final private ModelPart leftHindLeg;
-    @Shadow @Final private ModelPart rightHindLeg;
-    @Shadow @Final private ModelPart tail;
-    @Shadow @Final private ModelPart rightHindBabyLeg;
-    @Shadow @Final private ModelPart leftHindBabyLeg;
-    @Shadow @Final private ModelPart rightFrontBabyLeg;
-    @Shadow @Final private ModelPart leftFrontBabyLeg;
+    @Shadow
+    @Final
+    protected ModelPart head;
+    @Shadow
+    @Final
+    protected ModelPart body;
+    @Shadow
+    @Final
+    private ModelPart leftFrontLeg;
+    @Shadow
+    @Final
+    private ModelPart rightFrontLeg;
+    @Shadow
+    @Final
+    private ModelPart leftHindLeg;
+    @Shadow
+    @Final
+    private ModelPart rightHindLeg;
+    @Shadow
+    @Final
+    private ModelPart tail;
+    @Shadow
+    @Final
+    private ModelPart rightHindBabyLeg;
+    @Shadow
+    @Final
+    private ModelPart leftHindBabyLeg;
+    @Shadow
+    @Final
+    private ModelPart rightFrontBabyLeg;
+    @Shadow
+    @Final
+    private ModelPart leftFrontBabyLeg;
+
     /**
      * @author Kitoglav
      * @reason add agreeing logic
@@ -67,7 +89,7 @@ public abstract class HorseModelMixin<T extends AbstractHorseEntity> extends Ani
         float u = t * 0.8F * g;
         float v = (1.0F - Math.max(o, n)) * (0.5235988F + m + q * MathHelper.sin(r) * 0.05F);
         this.head.pitch = o * (0.2617994F + m) + n * (2.1816616F + MathHelper.sin(r) * 0.05F) + v;
-        float p1 = ((IHorseAgree)arg).bjorkhorse$getAgreeProgress(h);
+        float p1 = ((IHorseAgree) arg).bjorkhorse$getAgreeProgress(h);
         this.head.pitch += MathHelper.sin(p1 * (float) Math.PI * 24) * 0.6F;
         this.head.yaw = o * l * 0.017453292F + (1.0F - Math.max(o, n)) * this.head.yaw;
         this.head.pivotY = o * -4.0F + n * 11.0F + (1.0F - Math.max(o, n)) * this.head.pivotY;
